@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Forms Bootstrap</title>
+  </head>
+  <body>
+    <section>
+
+        <div class="container-fluid">
+
+            <div class="row justify-content-center mt-3">
+                <div class="col-6">
+                    <form name="formulario-teste" method="post" action="" class="needs-validation">
+
+                        <div class="row">
+                            <label class="col-12 form-label">Nome de Usuário:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="text" name="usuario" class="form-control">
+                            </div>
+                        </div><br>
+
+                        <div class="row">
+                            <label class="col-12 form-label">Link Personalizado:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">http//linkpersonalizado.com/blablabla/</span>
+                                <input type="text" name="usuario" class="form-control">
+                            </div>
+                        </div><br>
+
+                        <div class="row">
+                            <label class="col-12 form-label">Preço do Produto:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">R$</span>
+                                <input type="text" name="usuario" class="form-control">
+                            </div>
+                        </div><br>
+
+                        <div class="row">
+                            <label class="col-4 form-label">Nome:</label>
+                            <div class="col-8">
+                                <input type="text" name="nome" class="form-control" required>
+                                <div class="valid-feedback">
+                                    Correto!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Preencha o seu nome completo!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <label class="col-4 form-label">E-mail:</label>
+                            <div class="col-8">
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <label class="col-4 form-label">Arquivo upload:</label>
+                            <div class="col-8">
+                                <input type="file" name="file" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <label class="col-4 form-label">Cor:</label>
+                            <div class="col-8">
+                                <input type="color" name="cor" class="form-control form-control-color">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">                                                                                      <!--Lista de dados-->
+                            <label class="col-4 form-label">Encontre seu curso:</label>
+                            <div class="col-8">
+                                <input list="listaCursos" name="cursos" class="form-control" placeholder="Escreva o nome do curso">
+                                <datalist id="listaCursos">
+                                    <option value="HTML 5"></option>
+                                    <option value="CSS 3"></option>
+                                    <option value="JS"></option>
+                                    <option value="PHP"></option>                                    
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">                                                                                      <!--Lista de seleção-->
+                            <label class="col-4 form-label">Selecione o curso:</label>
+                            <div class="col-8">
+                                <select required class="form-select">               <!--Pode utilizar a class form-select-sm para diminuir ou form-select-lg para aumentar-->
+                                    <option selected value="">---Selecione---</option>
+                                    <option value="HTML 5">HTML 5</option>
+                                    <option value="CSS 3">CSS 3</option>
+                                    <option value="JS">JS</option>
+                                    <option value="PHP">PHP</option>                                        
+                                </select>
+                            </div>                                    
+                        </div>
+
+                        <div class="row mt-3">                                                                                      <!--Lista de seleção-->
+                            <label class="col-4 form-label">Central de Notificações:</label>
+                            <div class="col-8">                                
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="promo" id="promo" checked>
+                                    <label class="form-check-label" for="promo">Promoções</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="info" id="info" checked>
+                                    <label class="form-check-label" for="info">Informações Úteis</label>
+                                </div>
+                            </div>                                    
+                        </div>
+
+                        <div class="row mt-3">                                                                                      <!--Lista de seleção-->
+                            <label class="col-4 form-label">Gênero:</label>
+                            <div class="col-8">                                
+                                <div class="form-check form-check-inline">
+                                    <input required class="form-check-input" type="radio" name="genero" id="masculino">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="genero" id="feminino">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                            </div>                                    
+                        </div>  
+
+                        <div class="row mt-3">                                                                                      <!--Lista de seleção-->
+                            <label class="col-4 form-label">Gostaria de receber nossas promoções</label>
+                            <div class="col-8">                                
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="news" id="news">
+                                    <label class="form-check-label" for="news">Receber promoções e novidades.</label>
+                                </div>
+                            </div>                                    
+                        </div>     
+
+                        <div class="row mt-3">                                                                                      <!--Lista de seleção-->
+                            <label class="col-12 form-label">Faixa de Preços</label>
+                            <div class="col-12">                                
+                                <input type="range" name="precos" class="form-range" max="10" min="1" step="3"> <!-- O step pode ser fracionado também, exemplo 0.5-->
+                            </div>                                    
+                        </div>                       
+                        <div class="row justify-content-evenly">
+                            <button onclick="validador()" type="submit" class="btn btn-dark col-2">Enviar</button>
+                            <button class="btn btn-outline-dark col-2">Enviar</button> <!--o btn-outline-dark torna branco o bg do botão-->
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section> 
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        
+        var campoAtivo = document.activeElement;	
+        campoAtivo.addEventListener("focusin", verificarCampo);
+
+        function verificarCampo() {
+            var valida = document.activeElement.parentNode;
+            valida.classList.add('was-validated');
+	    }
+
+        
+
+        function validador(){		
+		var nome = document.getElementsByName("nome")[0];
+		
+            if (nome.value.length < 4) {
+                nome.parentNode.classList.add('was-validated');
+                return false;
+            }
+	    };
+    </script>
+  </body>
+</html>
